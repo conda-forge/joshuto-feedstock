@@ -1,5 +1,5 @@
 context:
-  version: 0.9.8
+  version: "0.9.9"
 
 package:
   name: joshuto
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kamiyaa/joshuto/archive/v${{ version }}.tar.gz
-  sha256: 877d841b2e26d26d0f0f2e6f1dab3ea2fdda38c345abcd25085a3f659c24e013
+  sha256: 85a230183f7478dee7c29229d78313ee07b759e596e19292acf024d2e5735efa
 
 build:
   number: 0
