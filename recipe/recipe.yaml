@@ -11,7 +11,7 @@ source:
 
 build:
   number: 1
-  skip: win
+  skip: win or ppc64le
 
 requirements:
   build:
@@ -22,9 +22,7 @@ requirements:
     - pkg-config
     - if: build_platform != target_platform
       then:
-        - zlib
-  host:
-    - zlib
+        - zlib  # needed for a build-only binary
 
 tests:
   - script:
