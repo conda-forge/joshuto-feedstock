@@ -10,8 +10,8 @@ source:
   sha256: 85a230183f7478dee7c29229d78313ee07b759e596e19292acf024d2e5735efa
 
 build:
-  number: 0
-  skip: win
+  number: 1
+  skip: win or ppc64le
 
 requirements:
   build:
@@ -19,6 +19,10 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - cargo-bundle-licenses
+    - pkg-config
+    - if: build_platform != target_platform
+      then:
+        - zlib  # needed for a build-only binary
 
 tests:
   - script:
