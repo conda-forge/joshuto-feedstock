@@ -21,7 +21,8 @@ requirements:
     - cargo-bundle-licenses
     - pkg-config
     - if: build_platform != target_platform
-      - zlib
+      then:
+        - zlib
   host:
     - zlib
 
