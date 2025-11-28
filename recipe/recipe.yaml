@@ -20,6 +20,8 @@ requirements:
     - ${{ stdlib('c') }}
     - cargo-bundle-licenses
     - pkg-config
+    - if: build_platform != target_platform
+      - zlib
   host:
     - zlib
 
